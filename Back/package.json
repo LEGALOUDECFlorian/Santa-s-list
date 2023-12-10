@@ -1,0 +1,22 @@
+{
+  "name": "lste-des-enfants-sages",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+ 
+    "dev": "npx nodemon index.js",
+    "db:create": "psql -U santaclaus2 -d santa -f ./data/create_table_childrenslist.sql",
+    "db:seed": "psql -U santaclaus2 -d santa -f ./data/seed_childrenslist.sql",
+    "db:reset": "npm run db:create && npm run db:seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "eslintrc": "^1.0.6",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.1"
+  }
+}
